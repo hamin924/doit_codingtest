@@ -7,7 +7,7 @@ n, m = map(int, input().split())
 A = list(map(int, input().split()))
 
 S = [0] * n # 합 배열
-C = [0] * m
+C = [0] * m # 나머지 계산한 값 넣기?
 S[0] = A[0]
 
 answer = 0
@@ -24,5 +24,6 @@ for i in range(n):
 for i in range(m):
     if C[i] > 1:
         answer += (C[i] * (C[i]-1) // 2) # /는 float형, //는 int형
+        # 조합 n*(n-1)//2
 
 print(answer)
